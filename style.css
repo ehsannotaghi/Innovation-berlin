@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+  }
+.card-img-top{
+    height: 225px; width: 100%; display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #252525;
+}
+
+
+
+

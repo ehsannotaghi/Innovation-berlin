@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>Innovation Berlin | Challenge</title>
+        <script src="./node_modules/axios/dist/axios.min.js"></script>
+        <script src="assets/js/jquery-3.1.1.slim.min.js"></script>
+        <script src="assets/js/web3.min.js"></script>
+        <script src="assets/js/sweetalert2@11.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0/lightgallery.umd.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0-beta.0/css/lg-autoplay.min.css" integrity="sha512-LlHSkMTvyRwh1YjzXwk6bxjdt3huGhCyK1vlCC6f7Db/g+2sYXz2YNasyZHnMUgykqPksmD/44DIINhqpWBjig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0-beta.0/css/lg-fullscreen.min.css" integrity="sha512-JlgW3xkdBcsdFiSfFk5Cfj3sTgo3hA63/lPmZ4SXJegICSLcH43BuwDNlC9fqoUy2h3Tma8Eo48xlZ5XMjM+aQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0-beta.0/css/lg-pager.min.css" integrity="sha512-F4gJy0MBz7nwvFMIYNeap+CXaVQY0Y9pwsn/Up4mvOfjYD50u+8D7jIVZBkeHV7hZ2xjhY8uJRMkRzWQBvznRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        
+    </head>
+    
+    
+    <body>
+        
+      
+        
+        <main role="main">
+            
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">Innovation Berlin</h1>
+                    <p class="lead text-muted">This is a Javascript based version of the task working with web3.js and walletconnect.js. It works with opensea API.
+                      Please enter a wallet address or you can easily connect your wallet to show case your NFTs.
+                      The NFTs will be shown below please wait a moment after your press button for api to work.
+                    </p>
+                    <p>
+                        
+                        <label class="BoldFont pt-2" tabindex="-1"><span class="balance"></span></label>
+                    <div class="prepare">
+                        <button id="BtnConnect" class="btn btn-primary my-2 btn-connect" onclick="onConnect()" type="button">Connect Wallet</button>
+                    </div>
+                    <div class="connected" style="display: none;">
+                        <button class="btn btn-danger my-2 btn-disconnect" onclick="onDisconnect()" type="button">Disconnect Wallet</button>
+                    </div>
+                    
+                    
+                    <button type="button" onclick="manualAddressInput()" class="btn btn-secondary my-2">go with manual wallet address</button>
+                    <div class="input-group mb-3 col-sm-3 mx-auto">
+                        
+                        <input id="manualWallet" type="text" class="form-control" placeholder="Wallet address" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    </p>
+                </div>
+            </section>
+            
+            <div class="album py-5 bg-light " style="display:none">
+                <div class="container">
+                    
+                    <div class="row" id="GalleryParent">
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        
+        <footer class="text-muted mt-3">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>This Webpage if only for innovation berlin challenge test to show web3 abilities</p>
+                <p>Visit my linkedin <a href="https://www.linkedin.com/in/ehsan-notaghi-810145128/"> Here</a> or my website <a href="https://ehsannotaghi.ir">ehsannotaghi.ir</a>.</p>
+            </div>
+        </footer>
+        
+        
+        
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="348" height="225" viewBox="0 0 348 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
+            <defs>
+                <style type="text/css"></style>
+            </defs><text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text>
+        </svg>
+        <link rel="stylesheet" type="text/css" href="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/css/blur.css" class="loom-blur-styles">
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="assets/js/web3.min.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
+        <script type="text/javascript" src="assets/js/index.min.js"></script>
+        <script type="text/javascript" src="assets/js/walletconnect-index.min.js"></script>
+        <script type="text/javascript" src="assets/js/fortmatic.js"></script>
+        <script type="text/javascript" src="assets/js/authereum.js"></script>
+        <script type="text/javascript" src="assets/js/InnovationBerlin.js"></script>
+        
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+    
+</html>
